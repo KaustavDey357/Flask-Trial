@@ -89,7 +89,6 @@ Flask-Trial/
 |   └── base.html       # The base template 
 |   └── update.html     # The update task page
 ├── static/             # CSS / JS / images (if any)
-├── requirements.txt    # Python dependencies
 └── README.md           # This file
 ```
 
