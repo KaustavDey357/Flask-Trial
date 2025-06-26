@@ -1,8 +1,4 @@
-Here’s a polished **README.md** template you can paste into your [Flask‑Trial](https://github.com/KaustavDey357/Flask-Trial) repo and adapt to your specifics:
 
----
-
-````markdown
 # Flask Trial
 
 A simple Flask-based TODO app using SQLite and SQLAlchemy for data storage.
@@ -34,7 +30,7 @@ A simple Flask-based TODO app using SQLite and SQLAlchemy for data storage.
    ```bash
    git clone https://github.com/KaustavDey357/Flask-Trial.git
    cd Flask-Trial
-````
+
 
 2. Create and activate a virtual environment:
 
@@ -124,7 +120,6 @@ MIT License © 2025 Kaustav Dey
 * Based on Flask's quickstart guide
 * Inspiration from online tutorials and official Flask documentation
 
-```
 
 ---
 
