@@ -93,18 +93,9 @@ Flask-Trial/
 └── README.md           # This file
 ```
 
-## 🧪 Testing
-
-*(If you add unit tests later…)*
-
-```bash
-pytest
-```
-
 ## 🚧 Known Issues / TODOs
 
 * [ ] Validation to prevent empty tasks
-* [ ] Support for updating tasks
 * [ ] Add user authentication
 * [ ] Better error handling & input sanitization
 * [ ] Deployment support (Docker, Heroku, etc.)
