@@ -1,16 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 
-{% block head %}
-    <title>Noice</title>
-{% endblock %}
+{%block head %}
+    <title>Update Page</title>
+{%endblock%}
 
-
-{% block body %}
-    <h1>Template</h1>
+{%block body %}
+    <h1>Update</h1>
     <div class="form">
-        <form action="/" method="POST">
+        <form action="/update/{{task.id}}" method="POST">
             <input type="text" name="content" id="content">
-            <input type="submit" value="Add Task">
+            <input type="submit" value="Update Task">
         </form>
     </div>
     <table>
@@ -19,15 +18,12 @@
             <th>Date</th>
             <th>Options</th>
         </tr>
-        {% for task in tasks %}
         <tr>
             <th>{{ task.Task }}</th>
             <th>{{ task.date_created.date() }}</th>
             <th>
-                <a href="/update/{{task.id}}">Update</a><br>
                 <a href="/delete/{{task.id}}">Delete</a>
             </th>
         </tr>
-        {% endfor %}
     </table>
-{% endblock %}
+{%endblock%}

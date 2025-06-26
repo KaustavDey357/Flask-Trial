@@ -32,6 +32,28 @@ def func():
         except:
             return "Error!"
         
+@app.route('/update/<int:id>' , methods=['GET','POST'])
+def upd(id):
+    r_task = Todo.query.get_or_404(id)
+    if request.method == 'GET':
+        return render_template('update.html' , task=r_task)
+    else :
+        r_task.Task = request.form['content']
+        try:
+            db.session.commit()
+            return redirect('/')
+        except:
+            return "Error!"
+        
+@app.route('/delete/<int:id>' )
+def delete(id):
+    r_task = Todo.query.get_or_404(id)
+    try:
+        db.session.delete(r_task)
+        db.session.commit()
+        return redirect('/')
+    except:
+        return "Error!"
     
         
 if __name__ == "__main__":
