@@ -6,28 +6,32 @@
 
 
 {% block body %}
-    <h1>Template</h1>
+    <h1 style="text-align: center">Template</h1>
     <div class="form">
-        <form action="/" method="POST">
+        <form action="/" method="POST" style="text-align: center">
             <input type="text" name="content" id="content">
             <input type="submit" value="Add Task">
         </form>
     </div>
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Date</th>
-            <th>Options</th>
-        </tr>
-        {% for task in tasks %}
-        <tr>
-            <th>{{ task.Task }}</th>
-            <th>{{ task.date_created.date() }}</th>
-            <th>
-                <a href="/update/{{task.id}}">Update</a><br>
-                <a href="/delete/{{task.id}}">Delete</a>
-            </th>
-        </tr>
-        {% endfor %}
-    </table>
+    {%if tasks|length < 1 %}
+        <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+    {%else %}
+        <table style="text-align: center">
+            <tr>
+                <th>Task</th>
+                <th>Date</th>
+                <th>Options</th>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <th>{{ task.Task }}</th>
+                <th>{{ task.date_created.date() }}</th>
+                <th>
+                    <a href="/update/{{task.id}}">Update</a><br>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                </th>
+            </tr>
+            {% endfor %}
+        </table>
+    {%endif%}
 {% endblock %}

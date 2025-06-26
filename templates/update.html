@@ -5,14 +5,14 @@
 {%endblock%}
 
 {%block body %}
-    <h1>Update</h1>
+    <h1 style="text-align: center">Update</h1>
     <div class="form">
-        <form action="/update/{{task.id}}" method="POST">
+        <form action="/update/{{task.id}}" method="POST" style="text-align: center">
             <input type="text" name="content" id="content">
             <input type="submit" value="Update Task">
         </form>
     </div>
-    <table>
+    <table style="text-align: center">
         <tr>
             <th>Task</th>
             <th>Date</th>
